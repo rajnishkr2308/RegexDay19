@@ -25,12 +25,21 @@ public class UserRegistration {
         Pattern pattern = Pattern.compile("^[A-Z]?[a-z]{3,}$");
         Matcher matcher = pattern.matcher("Kumar");
         Matcher matcher1 = pattern.matcher("Kumar");
-        if (matcher.matches()&& matcher1.matches())
+        if (matcher.matches() && matcher1.matches())
             System.out.println("valid");
         else
             System.out.println("Invalid");
+        /*
+        Uc3:User need valid Email
+         */
 
+        boolean result3 = Pattern.matches("[a-z]{3,}[.][a-z0-9]*@[a-z]{2,}[.][a-z]{2,}[.]*[a-z]*","rajneeshsingh9905@gmail.com");
+        if (result3)
+            System.out.println("Valid Email Address");
+        else
+            System.out.println("Invalid Email Address");
 
         }
     }
+
 
