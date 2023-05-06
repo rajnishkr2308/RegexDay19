@@ -51,6 +51,29 @@ public class UserRegistration {
             System.out.println("valid");
         } else {
             System.out.println("Invalid");
+            /*
+            U5: User Need to follow pre-defined Password rules
+             */
+
+            //rule1: minimum 8 chracters
+            System.out.print("Enter Mobile Password:- ");
+            String password = sc.next();
+            Pattern pattern5 = Pattern.compile("^[a-z]{8}$");
+            Matcher matcher5 = pattern5.matcher(password);
+            if(matcher5.matches()){
+                System.out.println("valid password_rule1");
+            }
+            else {
+                System.out.println("Invalid password_rule1");
+
+                //rule2: minimum 8 chracters with atleat 1 capital chracter
+                Pattern pattern6 = Pattern.compile("^[A-Za-z]{8,}$");
+                Matcher matcher6 = pattern.matcher("mySecretPassword");
+                if (matcher.matches())
+                    System.out.println("valid password_rule2");
+                else
+                    System.out.println("Invalid password_rule2");
+            }
 
         }
     }
